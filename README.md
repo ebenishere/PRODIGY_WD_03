@@ -1,6 +1,6 @@
 # PRODIGY_WD_03
 
-Dark-themed Neon Tic-Tac-Toe built with HTML, CSS, and JavaScript.
+A tic-tac-toe web application, you can use HTML, CSS, and JavaScript. By implementing functions to handle user clicks, track game state, and check for winning conditions, you can create an interactive and engaging tic-tac-toe game. With these technologies and functionalities, users can play against each other or against an Al opponent, aiming to get three markers in a row to win the game.
 
 ## Features
 
@@ -11,15 +11,3 @@ Dark-themed Neon Tic-Tac-Toe built with HTML, CSS, and JavaScript.
 - Score tracking for X, O, and Draws
 - New round and mode switching controls
 - Responsive layout for desktop and mobile
-
-## Run Locally
-
-1. Open `index.html` in your browser.
-2. Choose a mode from the start dialog.
-3. Play and track score across rounds.
-
-## Project Files
-
-- `index.html` - App structure and mode-selection dialog
-- `style.css` - Dark neon styling, animations, and responsive design
-- `script.js` - Game logic, turn handling, win checks, and AI moves
