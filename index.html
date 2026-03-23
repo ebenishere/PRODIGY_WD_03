@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Neon Tic-Tac-Toe</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&family=Rajdhani:wght@500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="bg-grid" aria-hidden="true"></div>
+
+  <main class="app-shell">
+    <header class="title-wrap">
+      <p class="eyebrow">Arcade Arena</p>
+      <h1>Neon Tic-Tac-Toe</h1>
+      <p id="modeText" class="mode-text">Mode: Not selected</p>
+    </header>
+
+    <section class="hud" aria-live="polite">
+      <p id="statusText" class="status">Choose a mode to begin</p>
+      <div class="score-wrap">
+        <div class="score-card">
+          <span class="score-label">X</span>
+          <span id="xScore" class="score-value">0</span>
+        </div>
+        <div class="score-card">
+          <span class="score-label">O</span>
+          <span id="oScore" class="score-value">0</span>
+        </div>
+        <div class="score-card">
+          <span class="score-label">Draw</span>
+          <span id="drawScore" class="score-value">0</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="board-wrap">
+      <div class="neon-doodle doodle-x" aria-hidden="true">X</div>
+      <div class="neon-doodle doodle-o" aria-hidden="true">O</div>
+      <div class="neon-doodle doodle-zap" aria-hidden="true">⚡</div>
+
+      <div id="board" class="board" role="grid" aria-label="Tic-Tac-Toe board">
+        <button class="cell" data-index="0" aria-label="Cell 1"></button>
+        <button class="cell" data-index="1" aria-label="Cell 2"></button>
+        <button class="cell" data-index="2" aria-label="Cell 3"></button>
+        <button class="cell" data-index="3" aria-label="Cell 4"></button>
+        <button class="cell" data-index="4" aria-label="Cell 5"></button>
+        <button class="cell" data-index="5" aria-label="Cell 6"></button>
+        <button class="cell" data-index="6" aria-label="Cell 7"></button>
+        <button class="cell" data-index="7" aria-label="Cell 8"></button>
+        <button class="cell" data-index="8" aria-label="Cell 9"></button>
+      </div>
+    </section>
+
+    <section class="controls">
+      <button id="newRoundBtn" class="btn btn-ghost" disabled>New Round</button>
+      <button id="changeModeBtn" class="btn btn-primary">Change Mode</button>
+    </section>
+  </main>
+
+  <div id="modeModal" class="modal-backdrop" role="dialog" aria-modal="true" aria-labelledby="modeTitle">
+    <div class="modal-card">
+      <h2 id="modeTitle">Select Game Mode</h2>
+      <p>Pick how you want to play before the match starts.</p>
+      <div class="mode-actions">
+        <button id="friendModeBtn" class="btn btn-primary">Play with a Friend</button>
+        <button id="aiModeBtn" class="btn btn-secondary">Play with AI Bot</button>
+      </div>
+    </div>
+  </div>
+
+  <div id="winnerModal" class="winner-modal-backdrop" role="dialog" aria-modal="true" aria-labelledby="winnerTitle">
+    <div class="winner-modal-card">
+      <h2 id="winnerTitle">Round Winner</h2>
+      <p id="winnerMessage">Player X won</p>
+      <button id="winnerOkBtn" class="btn btn-primary">Awesome</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
